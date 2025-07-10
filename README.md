@@ -1,59 +1,58 @@
-````markdown
-# Proyecto: Inventario con Estructuras de Datos
+# 📦 Proyecto: Inventario con Estructuras de Datos
 
-Este proyecto es una aplicación que permite administrar un inventario usando diferentes estructuras de datos en Python. Fue desarrollado como práctica para entender cómo funcionan los arreglos, listas enlazadas, pilas, colas y árboles binarios de búsqueda (ABB).
-
-Cada estructura tiene su propio archivo `.py` y cumple una función específica en el sistema de inventario.
-
-## Archivos del proyecto
-
-| Archivo                     | Función principal                                                       |
-|-----------------------------|-------------------------------------------------------------------------|
-| `arreglos.py`               | Almacena productos y permite ordenarlos por nombre o precio.            |
-| `listas_enlazadas.py`       | Permite agregar, eliminar y buscar productos dinámicamente.             |
-| `pilas.py`                  | Guarda un historial de cambios y permite deshacer la última acción.     |
-| `colas.py`                  | Simula la atención de clientes en orden de llegada.                     |
-| `arbol_binario_busqueda.py` | Inserta y busca productos de forma eficiente usando un árbol binario.   |
+Este proyecto es una aplicación en Python que permite administrar un inventario utilizando distintas estructuras de datos. Cada archivo contiene una estructura distinta (arreglos, listas enlazadas, pilas, colas y árboles binarios de búsqueda), con menús interactivos para probarlas.
 
 ---
 
-## 1. Arreglos (`arreglos.py`)
+## 📁 Archivos del Proyecto
 
-Usa una lista de diccionarios para guardar productos con estos datos:
+| Archivo                     | Descripción                                                            |
+| --------------------------- | ---------------------------------------------------------------------- |
+| `arreglos.py`               | Guarda productos y permite ordenarlos por nombre o precio.             |
+| `listas_enlazadas.py`       | Permite agregar, eliminar y buscar productos dinámicamente.            |
+| `pilas.py`                  | Lleva un historial de operaciones (agregar, eliminar, editar).         |
+| `colas.py`                  | Simula la atención a clientes en orden de llegada (FIFO).              |
+| `arbol_binario_busqueda.py` | Inserta y busca productos usando un árbol binario ordenado por código. |
 
-- `nombre`
-- `codigo`
-- `cantidad`
-- `precio`
+---
 
-### Funciones:
+## 🗂️ 1. Arreglos (`arreglos.py`)
 
-- `mostrar_productos()`: muestra los productos.
-- `ordenar_por_nombre()`: ordena por nombre alfabéticamente.
-- `ordenar_por_precio()`: ordena de menor a mayor precio.
-- `menu()`: menú interactivo.
+Se utiliza una lista de diccionarios para almacenar productos con los siguientes atributos:
 
-### Ejecutar:
+* `nombre`
+* `codigo`
+* `cantidad`
+* `precio`
+
+### Funciones disponibles
+
+* `mostrar_productos()`
+* `ordenar_por_nombre()`
+* `ordenar_por_precio()`
+* `menu()`
+
+### Ejecutar
 
 ```bash
 python arreglos.py
-````
+```
 
 ---
 
-## 2. Listas Enlazadas (`listas_enlazadas.py`)
+## 🔗 2. Listas Enlazadas (`listas_enlazadas.py`)
 
-Permite manejar productos de forma dinámica. Cada nodo de la lista guarda un producto.
+Permite administrar el inventario dinámicamente mediante una lista enlazada simple.
 
-### Funciones:
+### Funciones disponibles
 
-* `agregar(producto)`: añade un producto.
-* `eliminar(codigo)`: elimina por código.
-* `buscar(codigo)`: busca un producto.
-* `mostrar()`: muestra todos los productos.
-* `menu()`: menú interactivo.
+* `agregar(producto)`
+* `eliminar(codigo)`
+* `buscar(codigo)`
+* `mostrar()`
+* `menu()`
 
-### Ejecutar:
+### Ejecutar
 
 ```bash
 python listas_enlazadas.py
@@ -61,18 +60,21 @@ python listas_enlazadas.py
 
 ---
 
-## 3. Pilas (`pilas.py`)
+## 🧱 3. Pilas (`pilas.py`)
 
-Usa una pila para llevar un historial de las últimas 10 operaciones: agregar, eliminar o editar productos. Permite deshacer la última.
+Lleva un historial de las últimas 10 operaciones y permite deshacer la última acción.
 
-### Funciones:
+### Funciones disponibles
 
-* `registrar_operacion(accion, producto)`: guarda en el historial.
-* `deshacer()`: revierte la última acción.
-* `agregar_producto()`, `eliminar_producto()`, `editar_producto()`, `mostrar_productos()`: operaciones básicas del inventario.
-* `menu()`: menú interactivo.
+* `registrar_operacion(accion, producto)`
+* `deshacer()`
+* `agregar_producto()`
+* `eliminar_producto()`
+* `editar_producto()`
+* `mostrar_productos()`
+* `menu()`
 
-### Ejecutar:
+### Ejecutar
 
 ```bash
 python pilas.py
@@ -80,19 +82,19 @@ python pilas.py
 
 ---
 
-## 4. Colas (`colas.py`)
+## ⏳ 4. Colas (`colas.py`)
 
-Simula una fila de clientes que hacen pedidos. Cada cliente indica qué productos quiere por su código.
+Simula una fila de atención a clientes que piden productos. Se atienden en orden de llegada (FIFO).
 
-### Funciones:
+### Funciones disponibles
 
-* `agregar_cliente_a_cola()`: agrega un cliente con su pedido.
-* `atender_siguiente_cliente()`: atiende al primero en la cola.
-* `mostrar_clientes_en_espera()`: muestra quiénes están esperando.
-* `mostrar_productos()`: lista de productos disponibles.
-* `menu_de_colas()`: menú interactivo.
+* `agregar_cliente_a_cola()`
+* `atender_siguiente_cliente()`
+* `mostrar_clientes_en_espera()`
+* `mostrar_productos()`
+* `menu_de_colas()`
 
-### Ejecutar:
+### Ejecutar
 
 ```bash
 python colas.py
@@ -100,18 +102,18 @@ python colas.py
 
 ---
 
-## 5. Árbol Binario de Búsqueda (ABB) (`arbol_binario_busqueda.py`)
+## 🌳 5. Árbol Binario de Búsqueda (`arbol_binario_busqueda.py`)
 
-Guarda los productos en un árbol binario ordenado por código para facilitar búsquedas rápidas.
+Permite insertar, buscar y mostrar productos ordenados por código mediante un ABB.
 
-### Funciones:
+### Funciones disponibles
 
-* `insertar_producto_en_arbol(raiz, producto)`: inserta un producto.
-* `buscar_producto_en_arbol(raiz, codigo)`: busca por código.
-* `recorrido_inorden(raiz)`: muestra los productos ordenados.
-* `menu_arbol_binario()`: menú interactivo.
+* `insertar_producto_en_arbol(raiz, producto)`
+* `buscar_producto_en_arbol(raiz, codigo)`
+* `recorrido_inorden(raiz)`
+* `menu_arbol_binario()`
 
-### Ejecutar:
+### Ejecutar
 
 ```bash
 python arbol_binario_busqueda.py
@@ -119,14 +121,13 @@ python arbol_binario_busqueda.py
 
 ---
 
-## Requisitos
+## ✅ Requisitos
 
 * Python 3.x
-* No se necesita instalar librerías externas (solo se usa `collections` que ya viene con Python).
+* No requiere librerías externas (solo `collections`, incluida en Python)
 
 ---
 
-## Créditos
+## 👨‍💻 Créditos
 
-Este proyecto fue creado como práctica de estructuras de datos en Python para representar un sistema de inventario simple, usando algoritmos básicos y menús interactivos por consola.
-
+Desarrollado como ejercicio de estructuras de datos en Python para simular la gestión de un inventario.
